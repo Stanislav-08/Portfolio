@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Dev | Software & Hardware Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">&lt;DevPortfolio /&gt;</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Alexandar — Full-Stack & Embedded Developer</h1>
+        <p class="subtitle">
+          I build responsive web applications, desktop software, and microcontroller hardware prototypes with clean, first-principles engineering.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-card">
+          <p>
+            I'm a developer passionate about turning ideas into working systems—whether that's a React web app hosted on the cloud, a C# desktop tool backed by SQL Server, or an ESP32 hardware device wired on a breadboard.
+          </p>
+          <p>
+            I enjoy writing modular, maintainable code, optimizing user interfaces for speed and clarity, and collaborating on innovative technical projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <span class="tag">Web App</span>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">GitHub ↗</a>
+            </div>
+            <h3>Future Jobs Analytics</h3>
+            <p>Interactive web dashboard modeling ten-year labor market trends with real-time data visualizations and responsive UI.</p>
+            <ul class="tech-list">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Vercel</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="tag">Desktop Software</span>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">GitHub ↗</a>
+            </div>
+            <h3>Vacation Manager Suite</h3>
+            <p>Windows desktop application featuring custom pagination matrices, role-based access, and conditional date filtering.</p>
+            <ul class="tech-list">
+              <li>C# / .NET 8</li>
+              <li>WinForms</li>
+              <li>SQL Server</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="tag">Embedded Hardware</span>
+              <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">GitHub ↗</a>
+            </div>
+            <h3>ESP32 Desk Companion</h3>
+            <p>Open-source desktop chat-robot built on an ESP32-C3 with an OLED display, audio amplification, and Li-Ion power management.</p>
+            <ul class="tech-list">
+              <li>ESP32-C3</li>
+              <li>C++</li>
+              <li>OLED / I2C</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Frontend & Web</h3>
+            <p>HTML5, CSS3, JavaScript, TypeScript, React, Flutter</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend & Desktop</h3>
+            <p>C#, .NET 8, Python, SQL Server, Git</p>
+          </div>
+          <div class="skill-group">
+            <h3>Hardware & IoT</h3>
+            <p>ESP32, Microcontrollers, Circuit Prototyping, SPI / I2C</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-card">
+          <p>Interested in collaborating or have a question? Send me a message below or connect via GitHub.</p>
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <input type="text" id="name" placeholder="Your Name" required />
+              <input type="email" id="email" placeholder="Your Email" required />
+            </div>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Alexandar. Built for Vercel.</p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
