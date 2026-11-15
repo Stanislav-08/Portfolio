@@ -3,7 +3,11 @@ export const profile = {
   name: 'Stanislav',
   email: 'stanislav.i.1306@gmail.com',
   github: 'https://github.com/Stanislav-08',
-  linkedin: 'https://linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/stanislav-ivanov-profile',
+  facebook: 'https://facebook.com',
+  instagram: 'https://instagram.com',
+  location: 'Based in Varna, Bulgaria',
+  resume: '/resume.pdf', // put your PDF at public/resume.pdf
 }
 
 export type Project = {
