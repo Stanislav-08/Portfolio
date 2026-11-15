@@ -46,7 +46,7 @@ export const projects: Project[] = [
     shotText: 'Finance\nTracker',
     description: 'Cross-platform mobile app for tracking personal finances, with data visualization and secure local storage.',
     tags: ['React', 'TypeScript', 'Vercel'],
-    link: profile.github + '/Finance-Tracker-App',
+    link: profile.github + '/Finance-Tracker',
   },
 ]
 
