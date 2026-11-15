@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: 'Future Jobs',
     shot: 's1',
-    shotText: 'Future Jobs\nAnalytics',
+    shotText: 'Future Jobs',
     description: 'Interactive dashboard modelling ten years of labor market trends, with live data visualizations and a responsive UI.',
     tags: ['React', 'TypeScript', 'Vercel'],
     link: profile.github + '/Future-Jobs',
