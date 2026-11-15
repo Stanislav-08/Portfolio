@@ -1,7 +1,7 @@
 // Edit your content here. Everything on the page reads from this file.
 export const profile = {
   name: 'Stanislav',
-  email: 'hello@example.com',
+  email: 'stanislav.i.1306@gmail.com',
   github: 'https://github.com/Stanislav-08',
   linkedin: 'https://linkedin.com',
 }
@@ -17,20 +17,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Future Jobs Analytics',
+    title: 'Future Jobs',
     shot: 's1',
     shotText: 'Future Jobs\nAnalytics',
     description: 'Interactive dashboard modelling ten years of labor market trends, with live data visualizations and a responsive UI.',
     tags: ['React', 'TypeScript', 'Vercel'],
-    link: profile.github,
+    link: profile.github + '/Future-Jobs',
   },
   {
-    title: 'Vacation Manager Suite',
+    title: 'Vacation Manager',
     shot: 's2',
     shotText: 'Vacation\nManager',
     description: 'Windows desktop app with custom pagination, role-based access and conditional date filtering.',
     tags: ['C# / .NET 8', 'WinForms', 'SQL Server'],
-    link: profile.github,
+    link: profile.github + '/Vacation-Manager',
   },
   {
     title: 'ESP32 Desk Companion',
@@ -38,7 +38,15 @@ export const projects: Project[] = [
     shotText: 'ESP32\nDesk Companion',
     description: 'Open-source desk robot on an ESP32-C3 with an OLED display, audio amplifier and Li-Ion power management.',
     tags: ['ESP32-C3', 'C++', 'OLED / I2C'],
-    link: profile.github,
+    link: profile.github + '/ESP32-Desk-Companion',
+  },
+  {
+    title: 'Finance Tracker',
+    shot: 's4',
+    shotText: 'Finance\nTracker',
+    description: 'Cross-platform mobile app for tracking personal finances, with data visualization and secure local storage.',
+    tags: ['React', 'TypeScript', 'Vercel'],
+    link: profile.github + '/Finance-Tracker-App',
   },
 ]
 
