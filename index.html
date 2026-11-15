@@ -3,158 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Dev | Software & Hardware Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Stanislav | Full-Stack & Embedded Developer</title>
+  <meta name="description" content="Full-stack and embedded developer building web apps, desktop software and ESP32 hardware." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-content">
-      <a href="#" class="logo">&lt;DevPortfolio /&gt;</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="nav">
+    <a href="#top" class="brand">Stanislav</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="pill">Start a project</a>
   </header>
 
-  <main>
-    <!-- Hero Section -->
+  <main id="top">
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Hello, I'm</p>
-        <h1>Alexandar — Full-Stack & Embedded Developer</h1>
-        <p class="subtitle">
-          I build responsive web applications, desktop software, and microcontroller hardware prototypes with clean, first-principles engineering.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <div class="hero-copy">
+        <h1>Code that runs from the browser to the <em>breadboard.</em></h1>
+        <p class="lead">I'm Stanislav, a full-stack and embedded developer. I build web apps, Windows desktop software and ESP32 devices, and I take each one from first sketch to working build.</p>
+        <ul class="chips">
+          <li>React</li><li>TypeScript</li><li>C# / .NET</li><li>ESP32</li>
+        </ul>
+        <div class="stats">
+          <div class="stat light"><span>3</span><small>Platforms: web, desktop, embedded</small></div>
+          <div class="stat"><span>0</span><small>Dependencies in this site</small></div>
         </div>
+        <div class="actions">
+          <a href="#contact" class="btn btn-light">Start a project</a>
+          <a href="#projects" class="btn btn-ghost">View my work</a>
+        </div>
+      </div>
+
+      <aside class="profile" aria-label="Profile">
+        <p class="avail"><i></i> Available for freelance and full-time work</p>
+        <!-- Swap this block for <img src="photo.jpg" alt="Stanislav"> when you have a photo -->
+        <div class="photo" role="img" aria-label="Portrait placeholder">S</div>
+        <a class="mail" href="mailto:hello@example.com" data-email>hello@example.com</a>
+        <div class="socials">
+          <a href="https://github.com/Stanislav-08" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </aside>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="track">
+        <span>React</span><span>TypeScript</span><span>JavaScript</span><span>Flutter</span><span>C#</span><span>.NET 8</span><span>WinForms</span><span>SQL Server</span><span>Python</span><span>C++</span><span>ESP32</span><span>I2C / SPI</span><span>Git</span><span>Vercel</span>
+        <span>React</span><span>TypeScript</span><span>JavaScript</span><span>Flutter</span><span>C#</span><span>.NET 8</span><span>WinForms</span><span>SQL Server</span><span>Python</span><span>C++</span><span>ESP32</span><span>I2C / SPI</span><span>Git</span><span>Vercel</span>
+      </div>
+    </div>
+
+    <section id="about" class="block about">
+      <h2>I like systems you can deploy and systems you can touch.</h2>
+      <div class="about-text">
+        <p>I turn ideas into working things: a React app on the cloud, a C# desktop tool backed by SQL Server, or an ESP32 wired up on a breadboard.</p>
+        <p>I write modular, maintainable code, tune interfaces for speed and clarity, and enjoy collaborating on technical projects that don't have an obvious answer yet.</p>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="about-card">
-          <p>
-            I'm a developer passionate about turning ideas into working systems—whether that's a React web app hosted on the cloud, a C# desktop tool backed by SQL Server, or an ESP32 hardware device wired on a breadboard.
-          </p>
-          <p>
-            I enjoy writing modular, maintainable code, optimizing user interfaces for speed and clarity, and collaborating on innovative technical projects.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <span class="tag">Web App</span>
-              <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">GitHub ↗</a>
-            </div>
+    <section id="projects" class="block">
+      <h2>Work that runs on a screen, a desk and a desktop.</h2>
+      <div class="work">
+        <article class="proj">
+          <div class="shot s1"><b>Future Jobs<br>Analytics</b></div>
+          <div class="meta">
             <h3>Future Jobs Analytics</h3>
-            <p>Interactive web dashboard modeling ten-year labor market trends with real-time data visualizations and responsive UI.</p>
-            <ul class="tech-list">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Vercel</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <span class="tag">Desktop Software</span>
-              <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">GitHub ↗</a>
-            </div>
+            <p>Interactive dashboard modelling ten years of labor market trends, with live data visualizations and a responsive UI.</p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Vercel</li></ul>
+            <a href="https://github.com/Stanislav-08" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="shot s2"><b>Vacation<br>Manager</b></div>
+          <div class="meta">
             <h3>Vacation Manager Suite</h3>
-            <p>Windows desktop application featuring custom pagination matrices, role-based access, and conditional date filtering.</p>
-            <ul class="tech-list">
-              <li>C# / .NET 8</li>
-              <li>WinForms</li>
-              <li>SQL Server</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <span class="tag">Embedded Hardware</span>
-              <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">GitHub ↗</a>
-            </div>
+            <p>Windows desktop app with custom pagination, role-based access and conditional date filtering.</p>
+            <ul class="tags"><li>C# / .NET 8</li><li>WinForms</li><li>SQL Server</li></ul>
+            <a href="https://github.com/Stanislav-08" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="shot s3"><b>ESP32<br>Desk Companion</b></div>
+          <div class="meta">
             <h3>ESP32 Desk Companion</h3>
-            <p>Open-source desktop chat-robot built on an ESP32-C3 with an OLED display, audio amplification, and Li-Ion power management.</p>
-            <ul class="tech-list">
-              <li>ESP32-C3</li>
-              <li>C++</li>
-              <li>OLED / I2C</li>
-            </ul>
-          </article>
-        </div>
+            <p>Open-source desk robot on an ESP32-C3 with an OLED display, audio amplifier and Li-Ion power management.</p>
+            <ul class="tags"><li>ESP32-C3</li><li>C++</li><li>OLED / I2C</li></ul>
+            <a href="https://github.com/Stanislav-08" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Frontend & Web</h3>
-            <p>HTML5, CSS3, JavaScript, TypeScript, React, Flutter</p>
-          </div>
-          <div class="skill-group">
-            <h3>Backend & Desktop</h3>
-            <p>C#, .NET 8, Python, SQL Server, Git</p>
-          </div>
-          <div class="skill-group">
-            <h3>Hardware & IoT</h3>
-            <p>ESP32, Microcontrollers, Circuit Prototyping, SPI / I2C</p>
-          </div>
-        </div>
+    <section id="skills" class="block">
+      <h2>One person, the whole stack.</h2>
+      <div class="skills">
+        <details open><summary>Frontend and web</summary><p>HTML5, CSS3, JavaScript, TypeScript, React, Flutter</p></details>
+        <details><summary>Backend and desktop</summary><p>C#, .NET 8, Python, SQL Server, Git</p></details>
+        <details><summary>Hardware and IoT</summary><p>ESP32, microcontrollers, circuit prototyping, SPI and I2C</p></details>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-card">
-          <p>Interested in collaborating or have a question? Send me a message below or connect via GitHub.</p>
-          <form id="contact-form" class="contact-form">
-            <div class="form-row">
-              <input type="text" id="name" placeholder="Your Name" required />
-              <input type="email" id="email" placeholder="Your Email" required />
-            </div>
-            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <p id="form-status" class="form-status" aria-live="polite"></p>
-          </form>
-        </div>
+    <section id="contact" class="block contact">
+      <div>
+        <h2>Have something in mind? Let's talk it through.</h2>
+        <p class="muted">Tell me what you're building and where you're stuck. I reply within a couple of days.</p>
       </div>
+      <form id="contact-form" class="form">
+        <div class="row">
+          <input type="text" id="name" placeholder="Your name" autocomplete="name" required />
+          <input type="email" id="email" placeholder="Your email" autocomplete="email" required />
+        </div>
+        <textarea id="message" rows="5" placeholder="What are you building?" required></textarea>
+        <button type="submit" class="btn btn-accent">Send message</button>
+        <p id="form-status" class="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© <span id="year"></span> Alexandar. Built for Vercel.</p>
-      <div class="social-links">
-        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:hello@example.com">Email</a>
-      </div>
-    </div>
+  <footer class="foot">
+    <p>© <span id="year"></span> Stanislav. Built by hand, hosted on Vercel.</p>
+    <a href="#top">Back to top</a>
   </footer>
 
   <script src="script.js"></script>
