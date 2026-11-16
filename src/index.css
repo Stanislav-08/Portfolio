@@ -1,4 +1,6 @@
 :root{
+  --pad:clamp(1.25rem,5vw,4rem);
+  --gutter:max(var(--pad),calc((100vw - 68rem)/2 + var(--pad)));
   --bg:#060b14; --surface:#0e1626; --line:#1b2a44;
   --text:#eaf2ff; --muted:#8fa3c0; --accent:#4da3ff; --cream:#eaf2ff;
   --sans:'Archivo',system-ui,-apple-system,sans-serif;
@@ -13,7 +15,7 @@ ul{list-style:none}
 .muted{color:var(--muted)}
 
 /* Nav */
-.nav{position:absolute;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem clamp(1.25rem,5vw,4rem)}
+.nav{position:absolute;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem var(--gutter)}
 .brand{font-weight:700;text-decoration:none;letter-spacing:-.01em}
 .nav nav{display:flex;gap:1.75rem;font-size:.9rem}
 .nav nav a{text-decoration:none;color:rgba(234,242,255,.8)}
@@ -21,7 +23,7 @@ ul{list-style:none}
 .pill{background:var(--cream);color:#04101f;text-decoration:none;font-weight:600;font-size:.85rem;padding:.55rem 1.1rem;border-radius:999px}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center;min-height:100vh;padding:7rem clamp(1.25rem,5vw,4rem) 4rem;
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center;min-height:100vh;padding:7rem var(--gutter) 4rem;
   background:radial-gradient(120% 95% at 15% 0%,#4da3ff 0%,#2563eb 28%,#0b1f4d 58%,var(--bg) 100%)}
 .hero h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.02;font-weight:800;letter-spacing:-.035em;max-width:13ch}
 .hero h1 em{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;color:#cfe3ff}
@@ -76,8 +78,8 @@ ul{list-style:none}
 .shot b{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.05;letter-spacing:-.03em;font-weight:800}
 .s1{background:radial-gradient(90% 90% at 30% 20%,#4da3ff,#10337a 70%)}
 .s2{background:radial-gradient(90% 90% at 70% 20%,#2b6be0,#0a1a40 75%)}
+.s4{background:radial-gradient(90% 90% at 70% 80%,#3b8bff,#0a1a40 75%)}
 .s3{background:radial-gradient(90% 90% at 30% 80%,#6aaeff,#0b1f4d 70%)}
-.s4{background:radial-gradient(90% 90% at 70% 80%,#6aaeff,#0d2a6d 70%)}
 .s3 b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.8rem,3.8vw,3rem)}
 .meta{padding:2rem;display:flex;flex-direction:column;gap:.9rem;justify-content:center}
 .meta h3{font-size:1.4rem;letter-spacing:-.02em}
@@ -103,7 +105,7 @@ input::placeholder,textarea::placeholder{color:#5d7194}
 input:focus,textarea:focus{outline:none;border-color:var(--accent)}
 .status{font-size:.85rem;color:var(--accent);min-height:1.2em}
 
-.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.75rem clamp(1.25rem,5vw,4rem);border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.75rem var(--gutter);border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
 .foot a{text-decoration:none}.foot a:hover{color:var(--text)}
 
 /* One page-load moment: hero copy */

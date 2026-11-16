@@ -12,7 +12,7 @@ export const profile = {
 
 export type Project = {
   title: string
-  shot: string // visual style class: s1 | s2 | s3
+  shot: string // visual style class: s1 | s2 | s3 | s4
   shotText: string
   description: string
   tags: string[]
