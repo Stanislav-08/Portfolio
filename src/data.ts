@@ -4,8 +4,8 @@ export const profile = {
   email: 'stanislav.i.1306@gmail.com',
   github: 'https://github.com/Stanislav-08',
   linkedin: 'https://www.linkedin.com/in/stanislav-ivanov-profile',
-  facebook: 'https://facebook.com',
-  instagram: 'https://instagram.com',
+  dribble: 'https://dribbble.com/Stanislav08',
+  figma: 'https://www.figma.com/@Stanislav08',
   location: 'Based in Varna, Bulgaria',
   resume: '/resume.pdf', // put your PDF at public/resume.pdf
 }
