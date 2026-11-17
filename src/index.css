@@ -86,7 +86,11 @@ ul{list-style:none}
 .meta p{color:var(--muted);font-size:.95rem}
 .tags{display:flex;flex-wrap:wrap;gap:.45rem}
 .tags li{font-size:.75rem;color:var(--muted);border:1px solid var(--line);padding:.2rem .65rem;border-radius:999px}
-.meta a{font-weight:600;font-size:.9rem;text-decoration:none;color:var(--accent);align-self:flex-start;border-bottom:1px solid currentColor}
+.links{display:flex;flex-wrap:wrap;gap:1.25rem}
+.links a{font-weight:600;font-size:.9rem;text-decoration:none;color:var(--accent);border-bottom:1px solid currentColor}
+.live{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0b1f4d;cursor:pointer}
+.live iframe{position:absolute;top:0;left:0;width:1280px;height:800px;border:0;transform-origin:0 0;background:#fff}
+.hint{position:absolute;right:.75rem;bottom:.75rem;font-size:.75rem;padding:.3rem .7rem;border-radius:999px;background:rgba(6,11,20,.8);color:var(--text);pointer-events:none}
 
 .skills{margin-top:2.5rem;border-top:1px solid var(--line)}
 .skills details{border-bottom:1px solid var(--line);padding:1.25rem 0}

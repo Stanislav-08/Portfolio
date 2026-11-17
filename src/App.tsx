@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { profile, projects, skills, tickerItems, type Project } from './data'
 
 const ICONS = {
@@ -88,15 +88,53 @@ function About() {
   )
 }
 
+const FRAME_W = 1280 // desktop width the site is rendered at, then scaled down to fit
+
+function LivePreview({ url, title }: { url: string; title: string }) {
+  const box = useRef<HTMLDivElement>(null)
+  const [scale, setScale] = useState(0.5)
+  const [active, setActive] = useState(false)
+
+  useEffect(() => {
+    const el = box.current
+    if (!el) return
+    const update = () => setScale(el.clientWidth / FRAME_W)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  return (
+    <div ref={box} className="live" onClick={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+      <iframe
+        src={url}
+        title={`${title} live preview`}
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        style={{ transform: `scale(${scale})`, pointerEvents: active ? 'auto' : 'none' }}
+      />
+      {!active && <span className="hint">Click to interact</span>}
+    </div>
+  )
+}
+
 function ProjectCard({ p }: { p: Project }) {
   return (
     <article className="proj">
-      <div className={`shot ${p.shot}`}><b style={{ whiteSpace: 'pre-line' }}>{p.shotText}</b></div>
+      {p.type === 'website' && p.demo ? (
+        <LivePreview url={p.demo} title={p.title} />
+      ) : (
+        <div className={`shot ${p.shot}`}><b style={{ whiteSpace: 'pre-line' }}>{p.shotText}</b></div>
+      )}
       <div className="meta">
         <h3>{p.title}</h3>
         <p>{p.description}</p>
         <ul className="tags">{p.tags.map((t) => <li key={t}>{t}</li>)}</ul>
-        <a href={p.link} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <div className="links">
+          {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer">Open live site ↗</a>}
+          <a href={p.link} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
       </div>
     </article>
   )

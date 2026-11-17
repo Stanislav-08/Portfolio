@@ -12,6 +12,8 @@ export const profile = {
 
 export type Project = {
   title: string
+  type: 'website' | 'desktop' | 'hardware' | 'mobile'
+  demo?: string // websites with a demo URL are shown as a live iframe preview
   shot: string // visual style class: s1 | s2 | s3 | s4
   shotText: string
   description: string
@@ -22,6 +24,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: 'Future Jobs',
+    type: 'website',
+    demo: 'https://future-jobs-2-0.vercel.app/',
     shot: 's1',
     shotText: 'Future Jobs',
     description: 'Interactive dashboard modelling ten years of labor market trends, with live data visualizations and a responsive UI.',
@@ -30,6 +34,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Vacation Manager',
+    type: 'desktop',
     shot: 's2',
     shotText: 'Vacation\nManager',
     description: 'Windows desktop app with custom pagination, role-based access and conditional date filtering.',
@@ -38,6 +43,7 @@ export const projects: Project[] = [
   },
   {
     title: 'ESP32 Desk Companion',
+    type: 'hardware',
     shot: 's3',
     shotText: 'ESP32\nDesk Companion',
     description: 'Open-source desk robot on an ESP32-C3 with an OLED display, audio amplifier and Li-Ion power management.',
@@ -46,6 +52,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Finance Tracker',
+    type: 'website',
+    demo: 'https://finance-tracker-application1.vercel.app/dashboard',
     shot: 's4',
     shotText: 'Finance\nTracker',
     description: 'Cross-platform mobile app for tracking personal finances, with data visualization and secure local storage.',
